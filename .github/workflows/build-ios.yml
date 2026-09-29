@@ -25,7 +25,7 @@ jobs:
 
       - name: Build IPA
         run: |
-          flet build ipa --exclude venv --android-extract-packages certifi
+          flet build ipa --yes --exclude venv --android-extract-packages certifi --flutter-build-args --no-codesign
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
