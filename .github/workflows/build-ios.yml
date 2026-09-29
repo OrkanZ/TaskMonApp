@@ -31,7 +31,7 @@ jobs:
         run: |
           mkdir -p build/ipa
           mkdir -p Payload
-          find build -name "Runner.app" -type d -exec cp -R {} Payload/ \;
+          find build -name "*.app" -type d -exec cp -R {} Payload/ \;
           zip -r build/ipa/TaskMonApp-Unsigned.ipa Payload
 
       - name: Upload Artifact
