@@ -1,0 +1,7 @@
+flet==1.0.1
+SQLAlchemy
+requests
+certifi
+urllib3
+charset-normalizer
+idna
