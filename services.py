@@ -391,19 +391,19 @@ def completar_mision(session: Session, mision_id: int):
     dificultad_mision = mision.banco_mision.dificultad if mision.banco_mision else None
     
     if dificultad_mision == Dificultad.MUY_FACIL:
-        xp_ganada = 5
+        xp_ganada = 10
         monedas_ganadas = 1
     elif dificultad_mision == Dificultad.FACIL:
-        xp_ganada = 10
+        xp_ganada = 20
         monedas_ganadas = 5
     elif dificultad_mision == Dificultad.NORMAL:
-        xp_ganada = 25
+        xp_ganada = 50
         monedas_ganadas = 10
     elif dificultad_mision == Dificultad.DIFICIL:
-        xp_ganada = 75
+        xp_ganada = 150
         monedas_ganadas = 30
     else:
-        xp_ganada = 25
+        xp_ganada = 50
         monedas_ganadas = 10
         
     if usuario.boost_xp_restantes > 0:
@@ -509,13 +509,13 @@ def completar_mision(session: Session, mision_id: int):
         rareza = meta.get("rareza", "Común")
         
         if rareza == "Legendario":
-            tope_xp = 550
+            tope_xp = 200
         elif rareza == "Muy Raro":
-            tope_xp = 500
+            tope_xp = 200
         elif rareza == "Raro":
-            tope_xp = 400
+            tope_xp = 150
         else:
-            tope_xp = 350
+            tope_xp = 100
             
         # Subida de nivel recursiva (por si gana mucha XP de golpe)
         while True:

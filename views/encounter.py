@@ -407,11 +407,11 @@ class EncounterView(ft.Container):
         await asyncio.sleep(0.4)
         
         # Cálculo de captura
-        base_rate = 0.20 # Común: 1/5
+        base_rate = 1/3 # Común: 1/3
         pk_rareza = self.meta.get("rareza", "Común")
-        if pk_rareza == "Raro": base_rate = 0.10
-        elif pk_rareza == "Muy Raro": base_rate = 1/15
-        elif pk_rareza == "Legendario": base_rate = 1/15
+        if pk_rareza == "Raro": base_rate = 1/6
+        elif pk_rareza == "Muy Raro": base_rate = 1/9
+        elif pk_rareza == "Legendario": base_rate = 1/9
         
         multiplier = 1.0
         if tipo_ball == ItemType.ULTRABALL: multiplier = 2.0
